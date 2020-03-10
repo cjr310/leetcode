@@ -11,7 +11,6 @@ public:
     }
     void generateParenthesisDFS(int left, int right,string out, vector<string>&res){
         if(left>right) return;
-        std::cout<<out<<std::endl;
         if(left==0&&right==0)res.push_back(out);
         else{
             if(left>0) {generateParenthesisDFS(left-1, right,out+'(', res);}
@@ -20,4 +19,4 @@ public:
     }
 };
 
-// 思路：dfs，保证左括号数量要多与右括号
+// 思路：dfs，保证左括号数量要多于右括号
